@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PaymentModelStoreContainer" CdmEntityContainer="PaymentEntities1">
+    <EntitySetMapping Name="banks">
+      <EntityTypeMapping TypeName="PaymentModel.bank">
+        <MappingFragment StoreEntitySet="bank">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bank_name" ColumnName="bank_name" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bank_account">
+      <EntityTypeMapping TypeName="PaymentModel.bank_account">
+        <MappingFragment StoreEntitySet="bank_account">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bank_id" ColumnName="bank_id" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="account_number" ColumnName="account_number" />
+          <ScalarProperty Name="bank_account_name" ColumnName="bank_account_name" />
+          <ScalarProperty Name="bank_password" ColumnName="bank_password" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="visible" ColumnName="visible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="PaymentModel.role">
+        <MappingFragment StoreEntitySet="role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="role_name" ColumnName="role_name" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sessions">
+      <EntityTypeMapping TypeName="PaymentModel.session">
+        <MappingFragment StoreEntitySet="session">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="failed_login_count" ColumnName="failed_login_count" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="body_query_content" ColumnName="body_query_content" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PaymentModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transaction_bank">
+      <EntityTypeMapping TypeName="PaymentModel.transaction_bank">
+        <MappingFragment StoreEntitySet="transaction_bank">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="date_trans" ColumnName="date_trans" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="ref_trans" ColumnName="ref_trans" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="bank_account_id" ColumnName="bank_account_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transaction_bankSMS">
+      <EntityTypeMapping TypeName="PaymentModel.transaction_bankSMS">
+        <MappingFragment StoreEntitySet="transaction_bankSMS">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="date_trans" ColumnName="date_trans" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="ref_trans" ColumnName="ref_trans" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="bank_account_id" ColumnName="bank_account_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transaction_game">
+      <EntityTypeMapping TypeName="PaymentModel.transaction_game">
+        <MappingFragment StoreEntitySet="transaction_game">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="recived_account" ColumnName="recived_account" />
+          <ScalarProperty Name="sent_account" ColumnName="sent_account" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="date_trans" ColumnName="date_trans" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="recived_bank_id" ColumnName="recived_bank_id" />
+          <ScalarProperty Name="sent_bank_id" ColumnName="sent_bank_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="PaymentModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="number_phone" ColumnName="number_phone" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="last_login_date" ColumnName="last_login_date" />
+          <ScalarProperty Name="last_login_ip" ColumnName="last_login_ip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_role">
+      <EntityTypeMapping TypeName="PaymentModel.user_role">
+        <MappingFragment StoreEntitySet="user_role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
